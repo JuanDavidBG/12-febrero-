@@ -5,3 +5,15 @@ Por ejemplo
 34,567 se convierte en 34k
 7'456,345 se conierte en 7M.
 Sí el número es meor a 1000 se debe devolver el mismo número como un string */
+
+let numero = parseInt(prompt("¿Cuantos likes tiene?"));
+
+const likes = (numero) => {
+  if (numero < 1000) {
+    console.log(`${Math.floor(numero / 1000).toFixed(0)}K`);
+  } else {
+     console.log(`${Math.floor(numero / 100000).toFixed(0)}K`);
+  }
+};
+
+likes(numero);
